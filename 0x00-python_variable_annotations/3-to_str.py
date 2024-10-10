@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """
- 0. Basic annotations - concat
+ 3. Basic annotations - to string
 """
-import math
 
 
 def to_str(n: float) -> str:
