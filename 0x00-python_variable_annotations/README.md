@@ -15,6 +15,9 @@ age: int = 25
 items: List[str] = ["dfds","df"]
 ```
 
+## TypeVar , Any
+- TypeVar : enforcing that related values (inputs and outputs) have the same type (type-safe)
+- Any: doesn't enforcing relatetion values (inputs and outputs) to have the same type (type-safe)
 ## Duck Typing
 - "If it walks like a duck and quacks like a duck, it's a duck."
 - instead of checking the type of an object, you check whether it behaves like a certain type.
