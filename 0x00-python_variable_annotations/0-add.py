@@ -4,7 +4,7 @@
 """
 
 
-def add(a: int, b: int) -> int:
+def add(a: float, b: float) -> float:
     """
     function that add two numbers
     """
