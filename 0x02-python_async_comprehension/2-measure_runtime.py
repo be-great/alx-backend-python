@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 measure the total runtime
 """
@@ -9,6 +10,7 @@ async_comprehension = __import__('1-async_comprehension').async_comprehension
 
 
 async def measure_runtime() -> float:
+    """async generator using building library function"""
     start_time = time.time()
     # to run 4 task async
     await asyncio.gather(*(async_comprehension() for _ in range(4)))

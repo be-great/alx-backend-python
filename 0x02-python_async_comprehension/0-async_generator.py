@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 generates 10 random numbers asynchronously
 """
@@ -7,6 +8,7 @@ from typing import AsyncGenerator
 
 
 async def async_generator() -> AsyncGenerator[float, None]:
+    """async generator using building library function"""
     for _ in range(10):
         # async wait 1 sec between async objects
         await asyncio.sleep(1)
