@@ -1,24 +1,38 @@
 import unittest
 from parameterized import parameterized
+
 """
 0. Parameterize a unit test
 """
 
 
-def TestAccessNestedMap(unittest.TestCase):
+# Define the access_nested_map function
+def access_nested_map(map, path):
+    level = map
+    for key in path:
+        if key in level:
+            level = level[key]
+        else:
+            raise KeyError(f"Key {key} not found in the map")
+    return level
+
+
+class TestAccessNestedMap(unittest.TestCase):
     """
-    implement the test case for nested map,...
+    Implement the test case for nested map.
     """
+
     @parameterized.expand([
-        ({"a": 1}, path=("a",)),
-        ({"a": {"b": 2}}, path=("a",)),
-        ({"a": {"b": 2}}, path=("a", "b"))
+        ({"a": 1}, ("a",), 1),
+        ({"a": {"b": 2}}, ("a",), {"b": 2}),
+        ({"a": {"b": 2}}, ("a", "b"), 2)
     ])
-    def access_nested_map(self, map, path):
-        level = map
-        for key in path:
-            if key in level:
-                level = level[key]
-            else:
-                raise keyError(f"key {key} not found in the map")
-        return level
+    def test_access_nested_map(self, nested_map, path, expected):
+        """
+        The test logic
+        """
+        self.assertEqual(access_nested_map(nested_map, path), expected)
+
+
+if __name__ == "__main__":
+    unittest.main()
