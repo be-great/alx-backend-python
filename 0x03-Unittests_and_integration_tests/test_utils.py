@@ -43,6 +43,5 @@ class TestAccessNestedMap(unittest.TestCase):
             access_nested_map(nested_map, path)
 
 
-
 if __name__ == "__main__":
     unittest.main()
