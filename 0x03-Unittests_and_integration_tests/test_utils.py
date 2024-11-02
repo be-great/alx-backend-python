@@ -8,6 +8,7 @@ from parameterized import parameterized
 
 # Define the access_nested_map function
 def access_nested_map(map, path):
+    """the nested map logic"""
     level = map
     for key in path:
         if key in level:
