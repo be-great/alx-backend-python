@@ -2,7 +2,13 @@ import unittest
 from unittest.mock import patch
 from parameterized import parameterized, parameterized_class
 from client import GithubOrgClient
-
+"""
+ 4. Parameterize and patch as decorators
+ 5. Mocking a property
+ 6. More patching
+ 7. Parameterize
+ 8. Integration test: fixtures
+"""
 
 class TestGithubOrgClient(unittest.TestCase):
     """Tests for the GithubOrgClient class."""
