@@ -11,6 +11,7 @@ from client import GithubOrgClient
  8. Integration test: fixtures
 """
 
+
 class TestGithubOrgClient(unittest.TestCase):
     """Tests for the GithubOrgClient class."""
 
