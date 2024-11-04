@@ -2,21 +2,10 @@
 import unittest
 from parameterized import parameterized
 from unittest.mock import patch, Mock
-from utils import get_json, memoize
+from utils import get_json, memoize, access_nested_map
 """
 0. Parameterize a unit test
 """
-
-
-def access_nested_map(map, path):
-    """the nested map logic"""
-    level = map
-    for key in path:
-        if key in level and isinstance(level, dict):
-            level = level[key]
-        else:
-            raise KeyError(f"Key {key} not found in the map")
-    return level
 
 
 class TestAccessNestedMap(unittest.TestCase):
