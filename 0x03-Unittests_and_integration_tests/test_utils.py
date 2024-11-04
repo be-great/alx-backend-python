@@ -29,7 +29,7 @@ class TestAccessNestedMap(unittest.TestCase):
         ({"a": 1}, ("a", "b"), 'b')
     ])
     def test_access_nested_map_exception(self, nested_map, path, expected):
-        """ Test that a KeyError is raised for the respective inputs """
+        """ a Test to test raise a KeyError is raised for the inputs """
         with self.assertRaises(KeyError) as e:
             access_nested_map(nested_map, path)
         self.assertEqual(f"KeyError('{expected}')", repr(e.exception))
@@ -58,6 +58,7 @@ class TestMemoize(unittest.TestCase):
     def test_memoize(self):
         """Test that a_method is only called once with memoize."""
         class TestClass:
+            """the class for the memoize method"""
             def a_method(self):
                 return 42
 
